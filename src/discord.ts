@@ -36,15 +36,13 @@ class DiscordRpcManager extends EasyPresence {
                         start: Date.now(),
                     },
                     assets: {
-                        large_image: state.type == 'studio' ? 'rstudio' : info.iconKey || config.defaultIcon,
-                        small_image: "rblxrp",
-                        small_text: "http://rblxrp.xyz",
+                        large_image: state.type == 'studio' ? 'rstudio' : info.iconKey || config.defaultIcon
                     },
                     instance: true,
                     party: {id:  state.type + s.gameId},
                     buttons: s.gameId == '0' ? undefined : [
                         {
-                            label: "► Play",
+                            label: "Join me!",
                             url: "https://roblox.com/games/" + s.gameId
                         }
                     ]
